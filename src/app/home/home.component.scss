@@ -1,0 +1,21 @@
+.home{
+  background-image: url(../../assets/17.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.home-caption{
+  position: absolute;
+  top: 65px;
+  height: 80%;
+}
+.font-blue{
+  color: #004b84;
+  font-weight: 800;
+  font-size: 3rem;
+}
