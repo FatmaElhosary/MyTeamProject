@@ -1,0 +1,52 @@
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+a {
+  text-decoration: none;
+  color: $colorblue;
+  cursor: pointer;
+}
+form {
+  border: 0;
+}
+
+#loginform {
+  background-color: $color5;
+
+  button {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+
+  .caption {
+    border: 3px solid $colordark;
+    .line-image {
+      display: flex;
+      align-items: center;
+      &:before,
+      &:after {
+        flex: 1;
+        content: "";
+        height: 1px;
+        background: $colordark;
+      }
+     
+    }
+    a{
+        font-size: 1.5vw;
+        @include mediaQ(600){
+            //font-size: 15px;
+        }
+    }
+  }
+  .form-check {
+    text-align: start;
+    label {
+      
+      color: $colorblue;
+    }
+  }
+}
