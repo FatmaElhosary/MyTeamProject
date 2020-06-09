@@ -27,18 +27,18 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     ContactComponent,
     NavbarComponent,
-    TeamComponent
+    TeamComponent,
 
     UserProfileComponent,
-    LoginComponent
+    LoginComponent,
 
 
 
     SignUpComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
 
     UserProfileComponent,
-    LoginComponent
+    LoginComponent,
 
   ],
   imports: [
