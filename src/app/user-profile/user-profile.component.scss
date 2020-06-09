@@ -1,0 +1,33 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+nav {
+  background-color: $colordark;
+  h4,
+  h5 {
+    display: inline;
+    margin-left: 5px;
+    color: white;
+  }
+}
+#userprofile {
+label{
+    color: $colordark;
+}
+    .slid{
+        background-color: $colordark;
+        width: 100%;
+       
+       // overflow: hidden;
+       h5{
+           font-size: 15px;
+           padding-top: 10px;
+       }
+    }
+    
+  @include mediaQ(600) {
+    img {
+     // width: 10px;
+    }
+  }
+}
