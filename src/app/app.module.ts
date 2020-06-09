@@ -28,7 +28,9 @@ import { LoginComponent } from './login/login.component';
     ContactComponent,
     NavbarComponent,
     TeamComponent,
+
     TeamComponent,
+
 
     UserProfileComponent,
     LoginComponent,
