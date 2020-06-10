@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserLogin } from '../user-login';
+import {FormControl,FormGroup,Validator, Validators} from '@angular/forms';
+import {AuthService} from '../auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,19 +9,20 @@ import { UserLogin } from '../user-login';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  userlogin = new UserLogin(1, '', '');
-  constructor() {}
-  submitted = false;
-  onSubmit() {
-    this.submitted = true;
-  }
-
+  
+  constructor(public _AuthService:AuthService,public _Router:Router) {}
+signinForm=new FormGroup({
+  'email':new FormControl(null,[Validators.required,Validators.email]),
+  'password':new FormControl(null,[Validators.required,Validators.pattern(/^[A-Z][0-9]{2,8}$/)]),
+})
+ 
   login() {
-    this.userlogin = new UserLogin(
-      1,
-      this.userlogin.name,
-      this.userlogin.password
-    );
+   this._AuthService.login(this.signinForm.value).subscribe(res=>{
+    console.log(res);
+    localStorage.setItem('token',res.token);
+    this._Router.navigateByUrl('/home');
+   },err=>{console.log(err);})
+    
   }
   ngOnInit(): void {}
   // TODO: Remove this when we're done

@@ -1,58 +1,65 @@
-
-<section id="loginform">
-   
+<nav id="loginnav" class="py-2">
+  <div class="container clearfix">
+    <img src="../assets/media/gtd_logo.png" alt="logo" class="float-left" />
+    <a routerLinkActive='active' routerLink ='/home' class="float-right">Home</a>
+  </div>
+</nav>
+<section id="loginform" class="h-100">
       <div class="text-center d-flex  align-items-center justify-content-center">
         <div class="col-md-4 py-5">
         <div class="caption p-3 my-5 rounded">
-          <i class="fas fa-user w-25 text-primary"></i>
-         <!-- Validating template-driven form in angular -->
-          <form (ngSubmit)="onSubmit()" #Login="ngForm" action="">
+            <div class="line-image">
+                <img
+                src="assets/media/loginIcon.png"
+                alt="loginimg"
+                class="py-3 w-25"
+              />
+            </div>
+         <!-- reactive Form in  angular -->
+          <form (ngSubmit)="login()" [formGroup]="signinForm" >
             <div class="form-group">
               <input
-                [(ngModel)]="userlogin.name"
                 type="text"
                 class="form-control ng-valid required"
-                id="name"
-                name="name"
-                #name="ngModel"
-                placeholder="UserName"
-                minlength="3" 
-                required
+                id="email"
+                formControlName="email"
+                placeholder="email"
               />
               <div
-              *ngIf="name.invalid && (name.dirty || name.touched)"
+              *ngIf="signinForm.controls.email.invalid && signinForm.controls.email.touched"
               class="alert alert-danger"
             >
-              <div *ngIf="name.errors.required">
-                Name is required.
-              </div>
-              <div *ngIf="name.errors.minlength">
-                Name must be at least 3 characters long.
-              </div>
-             
+            email not valid
             </div>
             </div>
     
             <div class="form-group">
               <input
-                [(ngModel)]="userlogin.password"
+              formControlName="password"
                 type="password"
                 class="form-control ng-valid "
                 id="password"
-                name="password"
                 placeholder="Password"
-                required
+                
               />
+              <div
+              *ngIf="signinForm.controls.password.invalid && signinForm.controls.password.touched"
+              class="alert alert-danger"
+            >
+            password not valid
+
+            </div>
             </div>
             <div class="form-check ">
-                <input  [(ngModel)]="userlogin.remember" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="remember">
+                <input  class="form-check-input" type="checkbox" id="inlineCheckbox1" value="remember">
                 <label class="form-check-label" for="inlineCheckbox1">remember me</label>
+                <a class="float-right" routerLink="/signup"> Don't have account? ,Register</a>
               </div>
-           
+          
             <button
               type="submit"
-              class="btn btn-primary px-5"
-              (click)="login(); Login.reset()"            
+              class="btn btn-success px-5"
+             [disabled]="signinForm.invalid"          
             >
               Login
             </button>
