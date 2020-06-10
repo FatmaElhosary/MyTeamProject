@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(_Router:Router) {
+    let token=localStorage.getItem('token');
+    //user not loged in
+    if(token==null){
+    _Router.navigateByUrl('/login');
+    }
+   }
 
   ngOnInit(): void {
   }
