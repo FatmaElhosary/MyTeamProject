@@ -1,21 +1,10 @@
-<nav id="loginnav" class="py-2">
-  <div class="container clearfix">
-    <img src="../assets/media/gtd_logo.png" alt="logo" class="float-left" />
-    <a routerLink="home" class="float-right">Home</a>
-  </div>
-</nav>
-<section id="loginform" class="h-100">
+
+<section id="loginform">
    
       <div class="text-center d-flex  align-items-center justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-4 py-5">
         <div class="caption p-3 my-5 rounded">
-            <div class="line-image">
-                <img
-                src="assets/media/loginIcon.png"
-                alt="loginimg"
-                class="py-3 w-25"
-              />
-            </div>
+          <i class="fas fa-user w-25 text-primary"></i>
          <!-- Validating template-driven form in angular -->
           <form (ngSubmit)="onSubmit()" #Login="ngForm" action="">
             <div class="form-group">
@@ -62,7 +51,7 @@
            
             <button
               type="submit"
-              class="btn btn-success px-5"
+              class="btn btn-primary px-5"
               (click)="login(); Login.reset()"            
             >
               Login

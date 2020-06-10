@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TeamComponent } from './team/team.component';
+//import { TeamComponent } from './team/team.component';
 
 
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -29,8 +29,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     ContactComponent,
     NavbarComponent,
-    TeamComponent,
-    TeamComponent,
+  
+
 
     UserProfileComponent,
     LoginComponent,
