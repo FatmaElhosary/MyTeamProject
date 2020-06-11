@@ -18,6 +18,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
+
 import { NotfoundComponent } from './notfound/notfound.component';
 
 
@@ -28,9 +29,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     HomeComponent,
     ContactComponent,
     NavbarComponent,
-    
 
-    TeamComponent,
+
+
 
 
     UserProfileComponent,
