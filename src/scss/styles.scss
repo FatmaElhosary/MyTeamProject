@@ -15,7 +15,19 @@
 } */
 
 body{
-  font-family: "segoe ui light";
+  font-family: "Poppins",sans-serif;
   color: $colordark;
 /*   overflow: hidden; */  //to show scroll in other pages
+}
+p{
+ 
+  color:#707b8e;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: normal;
+}
+h1,h2,h3,h4,h5{
+color: #2b4b80;
+font-weight: 500;
+font-weight: normal;
 }
