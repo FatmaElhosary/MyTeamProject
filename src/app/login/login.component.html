@@ -1,9 +1,4 @@
-<nav id="loginnav" class="py-2">
-  <div class="container clearfix">
-    <img src="../assets/media/gtd_logo.png" alt="logo" class="float-left" />
-    <a routerLinkActive='active' routerLink ='/home' class="float-right">Home</a>
-  </div>
-</nav>
+
 <section id="loginform" class="h-100">
       <div class="text-center d-flex  align-items-center justify-content-center">
         <div class="col-md-4 py-5">
@@ -53,12 +48,12 @@
             <div class="form-check ">
                 <input  class="form-check-input" type="checkbox" id="inlineCheckbox1" value="remember">
                 <label class="form-check-label" for="inlineCheckbox1">remember me</label>
-                <a class="float-right" routerLink="/signup"> Don't have account? ,Register</a>
+                <a class="float-right" routerLink="signup"> Don't have account? ,Register</a>
               </div>
           
             <button
               type="submit"
-              class="btn btn-success px-5"
+              class="btn btn-primary px-5"
              [disabled]="signinForm.invalid"          
             >
               Login
