@@ -30,6 +30,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     NavbarComponent,
     
 
+    TeamComponent,
+
+
     UserProfileComponent,
     LoginComponent,
 

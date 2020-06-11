@@ -1,18 +1,22 @@
 @import '../../scss/variables';
 @import '../../scss/mixin';
 
+
+nav{background-color: $colordark}
 a {
   text-decoration: none;
   color: $colorblue;
   cursor: pointer;
-}
+} 
 form {
   border: 0;
 }
 
 #loginform {
-  background-color: $color5;
-
+background-image: url('../../assets/media/loginbg.jpg');
+background-size: cover;
+background-position: 50% 50%;
+background-repeat: no-repeat;
   button {
     border-radius: 0;
     -webkit-border-radius: 0;
@@ -22,7 +26,8 @@ form {
   }
 
   .caption {
-    border: 3px solid $colordark;
+    border: 1px solid $colordark;
+    
     .line-image {
       display: flex;
       align-items: center;
@@ -33,19 +38,21 @@ form {
         height: 1px;
         background: $colordark;
       }
-     
-    }
+    
+}
     a{
-        font-size: 1.5vw;
+        font-size: 15px;
         @include mediaQ(600){
             //font-size: 15px;
         }
     }
+    label{
+      font-size: 15px;
+    }
   }
   .form-check {
     text-align: start;
-    label {
-      
+    label {    
       color: $colorblue;
     }
   }
