@@ -30,6 +30,8 @@ import { EditComponent } from './edit/edit.component';
 @NgModule({
   declarations: [
     AppComponent,
+    SignUpComponent,
+    ResetPasswordComponent,
 
     HomeComponent,
     ContactComponent,
