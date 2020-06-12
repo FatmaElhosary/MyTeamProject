@@ -18,7 +18,7 @@
       <li class="nav-item">
         <a class="nav-link mr-5" routerLinkActive='active' routerLink ='/contact'>Contact</a>
       </li>
-      <button routerLink ='login' (click)="logOut()" class="btn submit_btn  mr-5"> <span *ngIf="checklogin()">Log Out</span> <span *ngIf="!checklogin()">Log in</span> </button>
+      <button routerLink ='login' (click)="logOut()" class="btn btn-primary mr-5"> <span *ngIf="checklogin()">Log Out</span> <span *ngIf="!checklogin()">Log in</span> </button>
     </ul>
  <!--  fatma edit user profile appear when user login-->
  <div *ngIf="checklogin()" class="float-right d-flex align-items-center justify-content-center ml-2">
