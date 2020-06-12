@@ -12,7 +12,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 
 import { NotfoundComponent } from './notfound/notfound.component';
 
-import { TeamComponent } from './team/team.component';
+
 import { EditComponent } from './edit/edit.component';
 
 
@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
   { path: 'team', component: TeamComponent },
 
-  { path: 'resetpassword', component: ResetPasswordComponent }
+  { path: 'resetpassword', component: ResetPasswordComponent },
 
   { path: 'edit' , component:EditComponent},
   { path: '**', component: NotfoundComponent },
