@@ -16,32 +16,11 @@
   color: #004f87;
   font-size: 30px;
   font-weight: 900;
-  padding-left:30px ;
-  padding-top: 10px;
+  padding-top: 12px;
 }
-.submit_btn{
-    background-image: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
-    background-size: 200% auto;
-    z-index: 2;
-    width: 95px;
-    padding: 0px;
-    display: inline-block;
-    transition: all 400ms ease-out;
-    text-align: center;
-    outline: none !important;
-    box-shadow: none !important;
-    color: #fff;
-    font-size: 18px;
-    line-height: 38px;
-    border: 6px solid rgba(204, 241, 255, .5);
-    border-radius: 33px;
-    &:hover{
-        background-position: right center;
-        color: #fff;
-    }
-    &:focus{
-        box-shadow: none;
-        outline: none;
-        border: 6px solid rgba(204, 241, 255, .5);
-    }
+@media (max-width:574px){
+  .navbar-light .navbar-nav .nav-item .nav-link{
+    background-color: #7C9AC8;
+
+  }
 }
