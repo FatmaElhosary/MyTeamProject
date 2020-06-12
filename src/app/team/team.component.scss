@@ -1,0 +1,65 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+.team {
+  background-color: #DDE2FF;
+  .slide {
+    h3 {
+      position: relative;
+      display: inline;
+      //color:#000000;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .img-overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      z-index: 1000;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
+      .social-icon {
+        color: #ff5c97;
+        cursor: pointer;
+      }
+}
+   
+    &:hover {
+      .img-overlay {
+        display: block;
+      }
+      h3{
+        color: #ff5c97;
+        z-index:3000000;
+      }
+      p{
+       position: relative;
+        z-index:5000000;
+      }
+    }
+    transition: all 900ms ease;
+    -webkit-transition: all 900ms ease;
+    -moz-transition: all 900ms ease;
+    -ms-transition: all 900ms ease;
+    -o-transition: all 900ms ease;
+}
+
+  h2 {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: 100px;
+      height: 3px;
+      background-color: #ff5c97;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+  }
+}

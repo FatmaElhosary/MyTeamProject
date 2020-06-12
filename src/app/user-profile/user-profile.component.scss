@@ -10,6 +10,9 @@ nav {
     color: white;
   }
 }
+body{
+  overflow: auto;
+}
 #userprofile {
 label{
     color: $colordark;

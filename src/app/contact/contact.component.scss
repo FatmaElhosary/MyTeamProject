@@ -1,7 +1,7 @@
 .contactUs
 {
-  background-image: url(../../assets/banner-bg.png);
-  background-position: left;
+  background-image: url(../../assets/h1_hero.png);
+  background-position: center;
   background-size: cover;
   height: 100vh;
   position: absolute;
@@ -9,6 +9,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  overflow: hidden;
 }
 .contact-caption{
   margin-top: 11.5rem;

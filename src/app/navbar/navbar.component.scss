@@ -6,7 +6,10 @@
   color: black;
   padding: 0 25px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
+}
+.navbar-light .navbar-nav li a:hover {
+  color: #FF2978;
 }
 .navbar-light .navbar-brand
 {
