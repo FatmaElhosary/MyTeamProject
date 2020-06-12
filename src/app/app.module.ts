@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+//owl-carousel
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+//end owl-carousel
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -17,6 +19,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +39,11 @@ import { LoginComponent } from './login/login.component';
 
     UserProfileComponent,
     LoginComponent,
+    TeamComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule,HttpClientModule,ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule,HttpClientModule,ReactiveFormsModule,
+    BrowserAnimationsModule,
+    CarouselModule ],
   providers: [],
   bootstrap: [AppComponent],
 })

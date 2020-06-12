@@ -18,8 +18,18 @@
       <li class="nav-item">
         <a class="nav-link mr-5" routerLinkActive='active' routerLink ='contact'>Contact</a>
       </li>
-      <button routerLink ='login' (click)="logOut()" class="btn btn-danger"> <span *ngIf="checklogin()">Log Out</span> <span *ngIf="!checklogin()">Log in</span> </button>
+      <button routerLink ='login' (click)="logOut()" class="btn btn-danger mr-2"> <span *ngIf="checklogin()">Log Out</span> <span *ngIf="!checklogin()">Log in</span> </button>
     </ul>
-   
+ <!--  fatma edit user profile appear when user login-->
+ <div *ngIf="checklogin()" class="float-right d-flex align-items-center justify-content-center ml-2">
+  <img
+    src="assets/media/img_danielle.jpg"
+    width="50px"
+    class="rounded-circle img-fluid "
+    alt="profileimg"
+  />
+  <h5>Fatma</h5>
+</div>
+<!-- end -->
   </div>
 </nav>

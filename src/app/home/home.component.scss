@@ -33,13 +33,19 @@
     z-index: 2;
     display: inline-block;
     transition: all 400ms ease-out;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
     text-align: center;
     color: #fff;
     font-size: 20px;
     line-height: 45px;
     border: 6px solid rgba(204, 241, 255, .5);
     border-radius: 33px;
-    &:hover{
+    &:hover
+ 
+{
         background-position: right center;
         color: #fff;
     }

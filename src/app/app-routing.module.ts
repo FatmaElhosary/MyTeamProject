@@ -6,6 +6,8 @@ import { ContactComponent } from './contact/contact.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { TeamComponent } from './team/team.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
 
@@ -14,10 +16,9 @@ const routes: Routes = [
   {path:'contact' , component:ContactComponent},
   { path: 'login', component: LoginComponent },
   { path: 'userprofile/:userId', component: UserProfileComponent },
-  { path: 'signup', component: SignUpComponent }
-
- 
-
+  { path: 'signup', component: SignUpComponent },
+  { path: 'team', component: TeamComponent },
+  { path: 'resetpassword', component: ResetPasswordComponent }
 ];
 
 @NgModule({

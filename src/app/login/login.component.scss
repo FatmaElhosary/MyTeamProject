@@ -8,13 +8,13 @@ a {
   color: $colorblue;
   cursor: pointer;
 } 
-form {
-  border: 0;
-}
+input{ -webkit-box-shadow: 0px 0px 30px -8px rgba(70,71,87,0.39);
+  -moz-box-shadow: 0px 0px 30px -8px rgba(70,71,87,0.39);
+  box-shadow: 0px 0px 30px -8px rgba(70,71,87,0.39);}
 
 #loginform {
-  min-height: 100vh;
-background-image: url('../../assets/slider-bg-1.png');
+  min-height: 85vh;
+
 
 
 background-repeat: no-repeat;
@@ -30,15 +30,9 @@ background-repeat: no-repeat;
     border: 1px solid $colordark;
     
     .line-image {
-      display: flex;
-      align-items: center;
-      &:before,
-      &:after {
-        flex: 1;
-        content: "";
-        height: 1px;
-        background: $colordark;
-      }
+      img{
+      width:100px;}
+     
     
 }
     a{
