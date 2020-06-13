@@ -18,17 +18,25 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+
+
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
+
 import { TeamComponent } from './team/team.component';
 import { UserTempletesComponent } from './user-templetes/user-templetes.component';
+
+import { NotfoundComponent } from './notfound/notfound.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SignUpComponent,
+    ResetPasswordComponent,
 
     HomeComponent,
     ContactComponent,
@@ -44,10 +52,20 @@ import { UserTempletesComponent } from './user-templetes/user-templetes.componen
     LoginComponent,
     TeamComponent,
     UserTempletesComponent,
+    NotfoundComponent,
+    EditComponent,
+
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule,HttpClientModule,ReactiveFormsModule,
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,ReactiveFormsModule,
     BrowserAnimationsModule,
     CarouselModule,MatSidenavModule ],
+ 
+ 
+
   providers: [],
   bootstrap: [AppComponent],
 })
