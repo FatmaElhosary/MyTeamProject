@@ -1,18 +1,27 @@
 .navbar{
- // background-color: #FFCADC;
+
   z-index: 999999999999;
 }
 .navbar-light .navbar-nav .nav-link
 {
   color: black;
-  padding: 0 25px;
+  padding: 10px 25px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
+}
+.navbar-light .navbar-nav li a:hover {
+  color: #FF2978;
 }
 .navbar-light .navbar-brand
 {
   color: #004f87;
   font-size: 30px;
   font-weight: 900;
-  padding-left:30px ;
+  padding-top: 12px;
+}
+@media (max-width:574px){
+  .navbar-light .navbar-nav .nav-item .nav-link{
+    background-color: #7C9AC8;
+
+  }
 }
