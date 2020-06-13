@@ -52,6 +52,9 @@ import { EditComponent } from './edit/edit.component';
     LoginComponent,
     TeamComponent,
     UserTempletesComponent,
+
+    UserTempletesComponent,
+
     NotfoundComponent,
     EditComponent,
 
@@ -63,8 +66,6 @@ import { EditComponent } from './edit/edit.component';
     HttpClientModule,ReactiveFormsModule,
     BrowserAnimationsModule,
     CarouselModule,MatSidenavModule ],
- 
- 
 
   providers: [],
   bootstrap: [AppComponent],
