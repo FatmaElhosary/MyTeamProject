@@ -9,6 +9,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 
 import { TeamComponent } from './team/team.component';
 import { EditComponent } from './edit/edit.component';
+import { TemplatesComponent } from './templates/templates.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'userprofile/:userId', component: UserProfileComponent },
   { path: 'team', component: TeamComponent },
-  { path: 'edit' , component:EditComponent},
+  { path: 'edit', component: EditComponent },
+  { path: 'templates', component: TemplatesComponent },
   { path: '**', component: NotfoundComponent },
 ];
 

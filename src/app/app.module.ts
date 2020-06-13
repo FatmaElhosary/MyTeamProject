@@ -26,6 +26,7 @@ import { TeamComponent } from './team/team.component';
 
 import { NotfoundComponent } from './notfound/notfound.component';
 import { EditComponent } from './edit/edit.component';
+import { TemplatesComponent } from './templates/templates.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { EditComponent } from './edit/edit.component';
     TeamComponent,
     NotfoundComponent,
     EditComponent,
+    TemplatesComponent,
 
   ],
   imports: [
