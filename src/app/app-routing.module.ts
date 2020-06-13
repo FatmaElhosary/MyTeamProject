@@ -8,9 +8,12 @@ import { LoginComponent } from './login/login.component';
 
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TeamComponent } from './team/team.component';
+
+import { UserTempletesComponent } from './user-templetes/user-templetes.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 import { NotfoundComponent } from './notfound/notfound.component';
+
 
 
 
@@ -25,10 +28,14 @@ const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
   { path: 'team', component: TeamComponent },
 
+  { path: 'usertemplets/:userId', component: UserTempletesComponent },
+
+
   { path: 'resetpassword', component: ResetPasswordComponent },
 
   { path: 'edit' , component:EditComponent},
   { path: '**', component: NotfoundComponent },
+
 
 ];
 
