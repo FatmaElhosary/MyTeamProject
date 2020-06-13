@@ -52,6 +52,7 @@ import { TemplatesComponent } from './templates/templates.component';
     UserProfileComponent,
     LoginComponent,
     TeamComponent,
+    UserTempletesComponent,
 
     UserTempletesComponent,
 
@@ -66,7 +67,6 @@ import { TemplatesComponent } from './templates/templates.component';
     AppRoutingModule,
     HttpClientModule,ReactiveFormsModule,
     BrowserAnimationsModule,
-
     CarouselModule,MatSidenavModule ],
 
   providers: [],

@@ -33,15 +33,10 @@ const routes: Routes = [
   { path: 'templates', component: TemplatesComponent },
 
   { path: 'usertemplets/:userId', component: UserTempletesComponent },
-
-
   { path: 'resetpassword', component: ResetPasswordComponent },
-
   { path: 'edit' , component:EditComponent},
 
   { path: '**', component: NotfoundComponent },
-
-
 ];
 
 @NgModule({
