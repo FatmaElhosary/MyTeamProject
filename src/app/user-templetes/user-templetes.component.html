@@ -1,0 +1,53 @@
+<section id="usertemplets">
+<mat-sidenav-container class="example-container" >
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+                 (closed)="events.push('close!')">                
+                 <div class="slid text-white text-center my-5 mb-4">                    
+                    <div class="pt-5 justify-content-center align-items-center">
+                     <img
+                     src="assets/media/img_danielle.jpg"
+                     alt="userprofile"
+                     width="50"
+                     height="50"
+                     class="rounded-circle img-fluid  mt-5"
+                   />
+                   <h5 class="text-center">danielle</h5>
+                  
+                    </div>
+                 
+                     <ul class="fa-ul text-left ml-2">
+                       <li>
+                         <a [routerLink]="['/usertemplets', 1]">
+                         <span><i class="fas fa-columns mr-2 pt-5 "></i></span>Dashboard
+                       </a>
+                       </li>
+                       <li>
+                         <a  [routerLink]="['/userprofile', 1]">
+                         <span><i class="fas fa-bars mr-2 pt-4"></i></span> Profile Settings
+                         </a>
+                       </li>
+                     </ul>
+                   </div> 
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+ <!-- <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
+      <p class="open-nav"><a mat-button  (click)="sidenav.toggle()"><i class="fas fa-bars fa-2x"></i> </a></p>
+    
+   <div class="container">
+    <div class="row "> 
+      <div class="col-md-12">
+        <h4 class="text-center">Your Templetes</h4>
+        <hr />   
+      </div>    
+      <div class="col-md-6 ">
+        <div class="general ml-5 mt-2  my-5">
+          
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</section>

@@ -5,9 +5,18 @@ import { ContactComponent } from './contact/contact.component';
 
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
+
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { TeamComponent } from './team/team.component';
+
+import { UserTempletesComponent } from './user-templetes/user-templetes.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+
 import { NotfoundComponent } from './notfound/notfound.component';
 
-import { TeamComponent } from './team/team.component';
+
+
+
 import { EditComponent } from './edit/edit.component';
 import { TemplatesComponent } from './templates/templates.component';
 
@@ -17,9 +26,16 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'userprofile/:userId', component: UserProfileComponent },
+  { path: 'signup', component: SignUpComponent },
   { path: 'team', component: TeamComponent },
-  { path: 'edit', component: EditComponent },
+
+ 
   { path: 'templates', component: TemplatesComponent },
+
+  { path: 'usertemplets/:userId', component: UserTempletesComponent },
+  { path: 'resetpassword', component: ResetPasswordComponent },
+  { path: 'edit' , component:EditComponent},
+
   { path: '**', component: NotfoundComponent },
 ];
 
