@@ -9,6 +9,17 @@
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
+.all a {
+  color: black;
+}
+.all {
+  a {
+    &:hover {
+      color: #ff2978;
+    }
+  }
+}
+
 .template-a {
   &:hover {
     color: white;

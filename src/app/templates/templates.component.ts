@@ -22,16 +22,17 @@ export class TemplatesComponent implements OnInit {
       $(this).addClass('activee');
       var value = $(this).attr('data-class');
       if (value == 'all') {
-        $('.all').fadeIn(1000);
+        $('.all').fadeOut();
+        $('.all').fadeIn(250);
       } else if (value == 'portofolio') {
-        $('.all').not($('.portofolio')).fadeOut();
-        $('.portofolio').fadeIn(1000);
+        $('.all').fadeOut();
+        $('.portofolio').fadeIn(250);
       } else if (value == 'photography') {
-        $('.all').not($('.photography')).fadeOut();
-        $('.photography').fadeIn(1000);
+        $('.all').fadeOut();
+        $('.photography').fadeIn(250);
       } else if (value == 'blog') {
-        $('.all').not($('.blog')).fadeOut();
-        $('.blog').fadeIn(1000);
+        $('.all').fadeOut();
+        $('.blog').fadeIn(250);
       }
     });
   }
