@@ -27,16 +27,10 @@ const routes: Routes = [
   { path: 'userprofile/:userId', component: UserProfileComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'team', component: TeamComponent },
-
   { path: 'usertemplets/:userId', component: UserTempletesComponent },
-
-
   { path: 'resetpassword', component: ResetPasswordComponent },
-
   { path: 'edit' , component:EditComponent},
   { path: '**', component: NotfoundComponent },
-
-
 ];
 
 @NgModule({
