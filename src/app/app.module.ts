@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
+//using angular material
+import {MatSidenavModule} from '@angular/material/sidenav';
+
+
 //owl-carousel
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -23,6 +27,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
 
 import { TeamComponent } from './team/team.component';
+import { UserTempletesComponent } from './user-templetes/user-templetes.component';
 
 import { NotfoundComponent } from './notfound/notfound.component';
 import { EditComponent } from './edit/edit.component';
@@ -31,6 +36,8 @@ import { TemplatesComponent } from './templates/templates.component';
 @NgModule({
   declarations: [
     AppComponent,
+    SignUpComponent,
+    ResetPasswordComponent,
 
     HomeComponent,
     ContactComponent,
@@ -45,6 +52,9 @@ import { TemplatesComponent } from './templates/templates.component';
     UserProfileComponent,
     LoginComponent,
     TeamComponent,
+
+    UserTempletesComponent,
+
     NotfoundComponent,
     EditComponent,
     TemplatesComponent,
@@ -56,8 +66,8 @@ import { TemplatesComponent } from './templates/templates.component';
     AppRoutingModule,
     HttpClientModule,ReactiveFormsModule,
     BrowserAnimationsModule,
-    CarouselModule ,
-  ],
+
+    CarouselModule,MatSidenavModule ],
 
   providers: [],
   bootstrap: [AppComponent],
