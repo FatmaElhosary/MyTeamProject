@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
 import { TeamComponent } from './team/team.component';
+import { UserTempletesComponent } from './user-templetes/user-templetes.component';
 
 const routes: Routes = [
 
@@ -15,7 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'userprofile/:userId', component: UserProfileComponent },
   { path: 'team', component: TeamComponent },
-
+  { path: 'usertemplets/:userId', component: UserTempletesComponent },
 ];
 
 @NgModule({
