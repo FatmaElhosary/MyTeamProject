@@ -67,10 +67,6 @@ import { EditComponent } from './edit/edit.component';
 
     CarouselModule,MatSidenavModule ],
 
-    CarouselModule ,
-  ],
-
-
   providers: [],
   bootstrap: [AppComponent],
 })
