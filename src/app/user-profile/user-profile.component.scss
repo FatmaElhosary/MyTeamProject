@@ -4,18 +4,9 @@
 
  #userprofile{
   .open-nav{
-    position: fixed; 
+    position: fixed;
     top:50%;
-    p{
-      cursor: pointer;
-  
-    }
-  }
-  mat-sidenav-content{
-    a{
-      cursor: pointer;
-  
-    }
+    z-index: 100;
   }
 a{
     text-decoration: none;      
@@ -24,14 +15,14 @@ a{
 .example-container {
     position: absolute;
     top: 100px;
-   // bottom: 0;
+    bottom: 0;
     left: 0;
     right: 0;
   
    
   }
   mat-sidenav{
-   background-color: $colordark;; 
+   background-color: $colordark; 
     width: 200px;
    }
   .slid{
@@ -41,12 +32,18 @@ a{
  
    
   }
+  .image-upload-container{
+input{
+  display: none;
+}
+  }
 }
 
- /* @media  only  screen  and  (max-width: 600px) {
+ @media  only  screen  and  (max-width: 800px) {
  
-  .templete {
-    padding-top: 10px;
-  }
+  mat-sidenav{
+      font-size: 14px;
+     width: 150px; 
+    }
 
-}   */
+}   

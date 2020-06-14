@@ -32,6 +32,7 @@ import { UserTempletesComponent } from './user-templetes/user-templetes.componen
 import { NotfoundComponent } from './notfound/notfound.component';
 import { EditComponent } from './edit/edit.component';
 import { TemplatesComponent } from './templates/templates.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { TemplatesComponent } from './templates/templates.component';
     NotfoundComponent,
     EditComponent,
     TemplatesComponent,
+    ChangePasswordComponent,
 
   ],
   imports: [
