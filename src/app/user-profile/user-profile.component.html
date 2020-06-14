@@ -1,4 +1,4 @@
-<section id='userprofile'>
+<section id="userprofile">
   <mat-sidenav-container class="example-container">
     <mat-sidenav
       #sidenav
@@ -6,6 +6,7 @@
       [(opened)]="opened"
       (opened)="events.push('open!')"
       (closed)="events.push('close!')"
+      class=""
     >
       <div class="slid text-white text-center my-5 mb-4">
         <div class="pt-5 justify-content-center align-items-center">
@@ -31,159 +32,103 @@
               Settings
             </a>
           </li>
+          <li>
+            <a [routerLink]="['/changepassword', 1]">
+              <span><i class="fas fa-unlock pt-4 mr-2"></i></span> Change
+              Password
+            </a>
+          </li>
         </ul>
       </div>
     </mat-sidenav>
 
     <mat-sidenav-content>
       <!-- <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
- 
-        <p  class="open-nav"><a mat-button (click)="sidenav.toggle()"  [(ngModel)]="opened"><i  class="fas fa-bars fa-2x"></i> </a></p>
-   
+      <p class="open-nav">
+        <a mat-button (click)="sidenav.toggle()"
+          ><i class="fas fa-bars fa-2x"></i>
+        </a>
+      </p>
 
       <div class="container">
+        <div class="col-md-12 my-2">
+          <h4 class="text-center">Your Profile Information</h4>
+          <hr />
+        </div>
+
         <div class="row">
           <div class="col-md-6">
-            <div class="general ml-5 mt-2 my-5">
-              <h4 class="">Profile Information</h4>
-              <hr />
-              <form
-                class="pt-3"
-                (ngSubmit)="changepass()"
-                [formGroup]="changePasswordForm"
-              >
-                <div class="form-group">
-                  <label for="exampleInputName"> Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputName"
-                    formControlName="name"
-                  />
-                </div>
-                <div
-                  *ngIf="
-                    changePasswordForm.controls.name.invalid &&
-                    changePasswordForm.controls.name.touched
-                  "
-                  class="alert alert-danger"
-                >
-                  name not valid it should be min 3 char
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlInput1">Email </label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    formControlName="email"
-                  />
-                </div>
-                <div
-                  *ngIf="
-                    changePasswordForm.controls.email.invalid &&
-                    changePasswordForm.controls.email.touched
-                  "
-                  class="alert alert-danger"
-                >
-                  email not valid
-                </div>
-
-                <h5>Profile Picture</h5>
-                <img
-                  src="assets/media/img_danielle.jpg"
-                  alt="profilepic"
-                  class="img-fluid"
+            <form [formGroup]="userInformationForm" (ngSubmit)="changeInfo()"
+             class="py-2">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="username"
+                  formControlName="name"
+                  class="form-control"
                 />
-
-                <hr />
-                <button
-                  class="btn btn-outline-info px-5 float-right"
-                  [disabled]="changePasswordForm.invalid"
-                  (click)="updateProfile()"
-                >
-                  Update
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="my-5 ml-5 mt-2">
-              <h4 class="">Change Password</h4>
-              <hr />
-              <form
-                class="pt-3"
-                (ngSubmit)="changepass()"
-                [formGroup]="changePasswordForm"
+              </div>
+              <div
+                *ngIf="
+                  userInformationForm.get('name').errors &&
+                  userInformationForm.get('name').touched
+                "
               >
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Current Password</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="exampleInputPassword"
-                    formControlName="currentpassword"
-                  />
-                </div>
-                <div
-                  *ngIf="
-                    changePasswordForm.controls.currentpassword.invalid &&
-                    changePasswordForm.controls.currentpassword.touched
-                  "
-                  class="alert alert-danger"
-                >
-                  password not valid
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputPassword1">New Password</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="exampleInputPassword1"
-                    formControlName="newPassword"
-                  />
-                </div>
-                <div
-                  *ngIf="
-                    changePasswordForm.controls.newPassword.invalid &&
-                    changePasswordForm.controls.newPassword.touched
-                  "
-                  class="alert alert-danger"
-                >
-                  password not valid
-                </div>
-                <div class="form-group pb-2">
-                  <label for="exampleInputPassword1"
-                    >Confirm New Password
-                  </label>
-                  <input
-                    type="password"
-                    class="form-control pb-2"
-                    id="exampleInputPassword2"
-                    formControlName="confirmpassword"
-                  />
-                </div>
-                <div
-                  *ngIf="
-                    changePasswordForm.controls.confirmpassword.invalid &&
-                    changePasswordForm.controls.confirmpassword.touched
-                  "
-                  class="alert alert-danger"
-                >
-                  confirmpassword not valid
-                </div>
-                <hr />
-
+                <p class="error-message text-danger">
+                  <span class="error-icon text-danger">! </span
+                  >{{
+                    userInformationForm.get("name").errors.msg ||
+                      "Please enter an item name."
+                  }}
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  formControlName="email"
+                  class="form-control"
+                />
+              </div>
+              <div
+                *ngIf="
+                  userInformationForm.get('email').errors && userInformationForm.get('email').touched
+                "
+              >
+                <p class="error-message text-danger">
+                  <span class="error-icon text-danger">! </span
+                  >{{
+                    userInformationForm.get("email").errors.msg ||
+                      "Please enter an valid email."
+                  }}
+                </p>
+              </div>
+              <div class="input-group-append">
                 <button
-                  class="btn btn-outline-info px-5 float-right"
-                  [disabled]="changePasswordForm.invalid"
-                  (click)="updateProfile()"
+                  type="button"
+                  class="btn btn-outline-primary"
+                  type="submit"
+                  [disabled]="!userInformationForm.valid"
                 >
-                  Change Password
+                  save
                 </button>
-              </form>
-            </div>
+              </div>
+              <!--   {{userInformationForm.valid}} -->
+              <!--   change profile image -->
+              <h5 class="mt-5">Profile Picture</h5>
+              <img
+                src="assets/media/img_danielle.jpg"
+                alt="profilepic"
+                class="img-fluid"
+              />
+              <label class="image-upload-container btn btn-bwm">
+                <span>Select Image</span>
+                <input #imageInput type="file" accept="image/*" />
+              </label>
+
+            </form>
           </div>
         </div>
       </div>
