@@ -7,6 +7,7 @@ import {
   FormBuilder,
   Validator
 } from '@angular/forms';
+
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
@@ -23,39 +24,28 @@ export class UserProfileComponent implements OnInit {
   //slidebar
   events: string[] = [];
   opened: boolean;
-  ////////////////////////////
-  
-  changePasswordForm = this._FormBuilder.group({
-    currentpassword: [
-      '',
-      Validators.required,
-      Validators.pattern(/^[A-Z][0-9]{2,8}$/),
-    ],
-    name: ['', Validators.required, Validators.minLength(3)],
-    email: ['', Validators.required, Validators.email],
-    newPassword: [
-      '',
-      Validators.required,
-      Validators.pattern(/^[A-Z][0-9]{2,8}$/),
-    ],
-    confirmpassword: [
-      '',
-      Validators.required,
-      Validators.pattern(/^[A-Z][0-9]{2,8}$/),
-      
-    ],
+/////////////
+//user information form
+userInformationForm =this._FormBuilder.group({
+  'name': [null, [Validators.required,Validators.minLength(3)]],
+   'email':[null,[Validators.required,Validators.email]],
+
   });
 
-  changepass() {
-    //waiting for API
-   // console.warn(this.changePasswordForm.value);
-  }
 
+/////////////////////  
+ 
+ 
+  changeInfo(){
+  console.warn(this.userInformationForm.value);
+ 
+  }
   updateProfile() {
    // this.changePasswordForm.get('name').setValue('fatma')
-   /*  this.changePasswordForm.patchValue({
+     /* this.userInformationForm.patchValue({
       name: 'fatma',
-    }); */
+    });  */
+  // this.myForm.get('resetPassword').errors
   }
 
   ngOnInit(): void {}
