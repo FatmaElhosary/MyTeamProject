@@ -4,8 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 //using angular material
-import {MatSidenavModule} from '@angular/material/sidenav';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 //owl-carousel
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -65,12 +64,9 @@ import { TemplatesComponent } from './templates/templates.component';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
     CarouselModule,
+    MatSidenavModule,
   ],
-=======
-    CarouselModule,MatSidenavModule ],
->>>>>>> ca5774d28b12f50959cd32784fd35028eaf39f63
 
   providers: [],
   bootstrap: [AppComponent],

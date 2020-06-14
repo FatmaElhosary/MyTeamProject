@@ -9,6 +9,9 @@
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
+h1 {
+  color: #004f87;
+}
 .all a {
   color: black;
 }
@@ -38,6 +41,7 @@
 .line {
   height: 3px;
   width: 20%;
+  background-color: #ff2978;
 }
 .item {
   &:hover {

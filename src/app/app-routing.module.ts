@@ -14,9 +14,6 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 
 import { NotfoundComponent } from './notfound/notfound.component';
 
-
-
-
 import { EditComponent } from './edit/edit.component';
 import { TemplatesComponent } from './templates/templates.component';
 
@@ -29,12 +26,11 @@ const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
   { path: 'team', component: TeamComponent },
 
- 
   { path: 'templates', component: TemplatesComponent },
 
   { path: 'usertemplets/:userId', component: UserTempletesComponent },
   { path: 'resetpassword', component: ResetPasswordComponent },
-  { path: 'edit' , component:EditComponent},
+  { path: 'edit', component: EditComponent },
 
   { path: '**', component: NotfoundComponent },
 ];
