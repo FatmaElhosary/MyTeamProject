@@ -5,7 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 //using angular material
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+//tooltip 
+import {MatTooltipModule} from '@angular/material/tooltip';
+//
 //owl-carousel
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -60,6 +62,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 
 
     ChangePasswordComponent,
+  
 
   ],
   imports: [
@@ -71,6 +74,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     BrowserAnimationsModule,
     CarouselModule,
     MatSidenavModule,
+    MatTooltipModule,
   ],
 
   providers: [],
