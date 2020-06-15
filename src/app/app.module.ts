@@ -27,6 +27,7 @@ import { TeamComponent } from './team/team.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { EditComponent } from './edit/edit.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,8 @@ import { EditComponent } from './edit/edit.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule,ReactiveFormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     CarouselModule ,
   ],
