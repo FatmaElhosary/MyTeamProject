@@ -1,7 +1,88 @@
 @import "../../scss/variables";
 @import "../../scss/mixin";
+
+/* @mixin gradient-text($gradient, $bg : 'light') {
+  @supports(mix-blend-mode: lighten) {
+    display: inline-block;
+    position: relative;
+    
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      
+      background: unquote($gradient);
+      pointer-events: none;
+    }
+
+    @if ($bg == 'light') {
+      color: #000;
+      background: #fff;
+      mix-blend-mode: multiply;
+
+      &::before {
+        mix-blend-mode: screen;
+      }
+    } @else {
+      color: #fff;
+      background: #000;
+      mix-blend-mode: lighten;
+
+      &::before {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+}
+ */
+
+
+@function stroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke * -1;
+  @for $i from $from through $stroke {
+    @for $j from $from through $stroke {
+      $shadow: append($shadow, $i * 1px $j * 1px 0 $color, comma);
+    }
+  }
+  @return $shadow;
+}
+
+@mixin stroke($stroke, $color) {
+  text-shadow: stroke($stroke, $color);
+}
+
+
+h2{ font-size: 4em;}
+
+/* h1 {
+  @include stroke(2, #FFF);
+} */
+
+/* h2 {
+  //just looks good ion thin stroke sizes.
+    text-shadow: -1px 0  #FFF, 0 1px  #FFF, 1px 0  #FFF, 0 -1px  #FFF;
+    font-family: "Arial";
+} */
+/* 
+h4 {
+    -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: rgba(98, 40, 40, 0.938);
+  -webkit-text-stroke-width: .5px; 
+  font-family: "Arial";
+}
+ */
+
+
 .team {
-  background-color: #DDE2FF;
+
+  .line {
+    height: 3px;
+    width: 20%;
+    background-color: #ff2978;
+  }
+  //background-color: #DDE2FF;
   .slide {
      h3 {
       display: inline;
@@ -17,9 +98,16 @@ p{
     .img-overlay {
     p{color:#fff;}
     h4{
-      color:$themeColor;
-      font-weight: 800;
+      //color:$themeColor;
+      font-weight: bold;
+      font-size: 1em;
+      color: #2b4b80;
+      letter-spacing: 0.2em;
+      @include stroke(2, #FFF);
     }
+  /*   .gradient1 {
+      @include gradient-text('linear-gradient(to right,#23966c, #faaa54, #e23b4a, #db0768, #360670)', 'light');
+    } */
       background-color: rgba(75,98,119,.5);
       position: absolute;
       right: 15px;    
@@ -31,7 +119,17 @@ p{
       -moz-transition: all 1s;
       -ms-transition: all 1s;
       -o-transition: all 1s;
-   
+     @include mediaQ(500) {
+      h4{
+
+font-size: 15px;
+
+
+      } 
+p{
+  font-size: 10px;
+}
+      }
 }
 
 .txt-overlay{
