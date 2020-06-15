@@ -35,6 +35,7 @@ import { EditComponent } from './edit/edit.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
