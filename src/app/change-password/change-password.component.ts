@@ -11,9 +11,9 @@ export class ChangePasswordComponent implements OnInit {
   opened: boolean;
   constructor(private _FormBuilder:FormBuilder) { }
   changePasswordForm =this._FormBuilder.group({
-        'oldpassword': [null,[Validators.required,Validators.pattern(/^[A-Z][0-9]{2,8}$/)]],
-        'newpassword': [null,[Validators.required,Validators.pattern(/^[A-Z][0-9]{2,8}$/)]],
-        'confirmpassword': [null,[Validators.required,Validators.pattern(/^[A-Z][0-9]{2,8}$/)]]
+        'oldpassword': [null,[Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/)]],
+        'newpassword': [null,[Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/)]],
+        'confirmpassword': [null,[Validators.required]]
     
   },{validator:PasswordValidator});
   changePassword(){

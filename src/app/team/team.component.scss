@@ -54,7 +54,24 @@
 }
 
 
-h2{ font-size: 4em;}
+h2{ 
+  font-size: 3em;
+&:after{
+  content: '';
+  width:130px;
+  height: 5px;
+  background-color: $themeColor;
+  display: block;
+  position: absolute;
+  top:100%;
+  left:50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+}
 
 /* h1 {
   @include stroke(2, #FFF);
