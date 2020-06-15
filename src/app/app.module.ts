@@ -30,6 +30,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { EditComponent } from './edit/edit.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { Edittemplate1Component } from './edittemplate1/edittemplate1.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,9 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 
 
     ChangePasswordComponent,
+
+
+    Edittemplate1Component,
 
   ],
   imports: [

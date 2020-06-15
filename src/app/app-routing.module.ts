@@ -17,6 +17,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { EditComponent } from './edit/edit.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { Edittemplate1Component } from './edittemplate1/edittemplate1.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,11 +26,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'userprofile/:userId', component: UserProfileComponent },
   { path: 'signup', component: SignUpComponent },
+  { path: 'edittemplate1', component: Edittemplate1Component },
   { path: 'team', component: TeamComponent },
 
-
-
-{path:'changepassword/:userId',component:ChangePasswordComponent},
+  { path: 'changepassword/:userId', component: ChangePasswordComponent },
 
   { path: 'templates', component: TemplatesComponent },
 
