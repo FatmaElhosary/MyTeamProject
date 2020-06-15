@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-light">
-  <div class="container-fluid pt-2">
+  <div class="container pt-2">
     <a class="navbar-brand mx-5">Navbar</a>
     <button
       class="navbar-toggler d-lg-none"
@@ -37,28 +37,64 @@
             >Contact</a
           >
         </li>
-        <button
+           <!--  fatma edit user profile appear when user login-->
+        <li class="nav-item" *ngIf="!checklogin()">
+          <a
+            class="nav-link btn btn-outline-info "
+            routerLinkActive="active"
+            routerLink="/login"
+            >LogIn</a
+          >
+        </li>
+      
+        <li class="nav-item dropdown"  *ngIf="checklogin()">
+          <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a  [routerLink]="['/userprofile', 1]">
+              <img
+                src="assets/media/img_danielle.jpg"
+                width="50px"
+                class="rounded-circle img-fluid"
+                alt="profileimg"
+                *ngIf="checklogin()"
+              />
+            </a>
+            <i class="fas fa-sliders-h ml-2"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/userprofile', 1]">Your Profile</a>
+            <a class="dropdown-item" [routerLink]="['/usertemplets', 1]">Your Templetes</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item"  routerLink="login" (click)="logOut()"> <span *ngIf="checklogin()">Log Out</span>
+              <span *ngIf="!checklogin()">Log in</span></a>
+          </div>
+        </li>
+     <!--    <button
           routerLink="login"
           (click)="logOut()"
           class="btn btn-danger mr-1"
         >
           <span *ngIf="checklogin()">Log Out</span>
           <span *ngIf="!checklogin()">Log in</span>
-        </button>
+        </button> -->
       </ul>
       <!--  fatma edit user profile appear when user login-->
-      <div
+  <!--     <div
         *ngIf="checklogin()"
         class="float-right d-flex align-items-center justify-content-center ml-2"
       >
+      <a  [routerLink]="['/userprofile', 1]">
         <img
           src="assets/media/img_danielle.jpg"
           width="50px"
           class="rounded-circle img-fluid"
           alt="profileimg"
+         
         />
-        <h5>Fatma</h5>
-      </div>
+      </a>
+         <h5>Fatma</h5> 
+      </div> -->
+     
+
       <!-- end -->
     </div>
   </div>

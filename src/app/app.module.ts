@@ -6,7 +6,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 //using angular material
 import { MatSidenavModule } from '@angular/material/sidenav';
 //tooltip 
-import {MatTooltipModule} from '@angular/material/tooltip';
+/* import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu'; */
+
 //
 //owl-carousel
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -74,7 +76,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     BrowserAnimationsModule,
     CarouselModule,
     MatSidenavModule,
-    MatTooltipModule,
+   /*  MatTooltipModule,
+    MatMenuModule, */
   ],
 
   providers: [],
