@@ -36,7 +36,7 @@
               *ngIf="signinForm.controls.password.invalid && signinForm.controls.password.touched"
               class="alert alert-danger"
             >
-            password not valid
+            password not valid <span>Like : A12154545</span>
 
             </div>
             </div>
@@ -53,8 +53,8 @@
               Login
             </button>
             <div class="mt-2 clearfix">
-              <a routerLink="resetpassword" class="float-left">Forget Password?</a>
-              <a class="float-right" routerLink="signup">New User</a>
+              <a routerLink="/resetpassword" class="float-left">Forget Password?</a>
+              <a class="float-right" routerLink="/signup">New User</a>
 
             </div>
           </form>

@@ -1,8 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+//using angular material
+import { MatSidenavModule } from '@angular/material/sidenav';
+//tooltip 
+/* import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu'; */
+
+//
 //owl-carousel
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -14,8 +21,6 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
-
-
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
@@ -23,9 +28,12 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
 
 import { TeamComponent } from './team/team.component';
+import { UserTempletesComponent } from './user-templetes/user-templetes.component';
 
 import { NotfoundComponent } from './notfound/notfound.component';
 import { EditComponent } from './edit/edit.component';
+import { TemplatesComponent } from './templates/templates.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 @NgModule({
@@ -47,8 +55,17 @@ import { EditComponent } from './edit/edit.component';
     UserProfileComponent,
     LoginComponent,
     TeamComponent,
+    UserTempletesComponent,
+
+    UserTempletesComponent,
+
     NotfoundComponent,
     EditComponent,
+    TemplatesComponent,
+
+
+    ChangePasswordComponent,
+  
 
   ],
   imports: [
@@ -58,7 +75,10 @@ import { EditComponent } from './edit/edit.component';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    CarouselModule ,
+    CarouselModule,
+    MatSidenavModule,
+   /*  MatTooltipModule,
+    MatMenuModule, */
   ],
 
   providers: [],

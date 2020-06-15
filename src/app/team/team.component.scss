@@ -3,63 +3,64 @@
 .team {
   background-color: #DDE2FF;
   .slide {
-    h3 {
-      position: relative;
+     h3 {
       display: inline;
       //color:#000000;
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 500;
     }
-    .img-overlay {
-      background-color: rgba(255, 255, 255, 0.85);
-      z-index: 1000;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: none;
-      .social-icon {
-        color: #ff5c97;
-        cursor: pointer;
-      }
+p{
+  font-size: 15px;
+   
 }
+  position: relative;
+    .img-overlay {
+    p{color:#fff;}
+    h4{
+      color:$themeColor;
+      font-weight: 800;
+    }
+      background-color: rgba(75,98,119,.5);
+      position: absolute;
+      right: 15px;    
+      left: 15px;
+      top:-100%;
+      bottom: 100%;   
+      transition: all 1s;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+   
+}
+
+.txt-overlay{
+    position: absolute;
+    bottom: 3%;
+    left: 15%;
+    right: 15%;
+    text-align: center;
+    width: 70%;
+    height: 30%;
+    background-color: white;
+    padding-top: 3%;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
    
     &:hover {
       .img-overlay {
-        display: block;
+        bottom: 15px;
+        top: 15px;
       }
-      h3{
-        color: #ff5c97;
-        z-index:3000000;
-      }
-      p{
-       position: relative;
-        z-index:5000000;
-      }
+     .txt-overlay{
+      bottom: -100%;
+     }
     }
-    transition: all 900ms ease;
-    -webkit-transition: all 900ms ease;
-    -moz-transition: all 900ms ease;
-    -ms-transition: all 900ms ease;
-    -o-transition: all 900ms ease;
 }
 
-  h2 {
-    position: relative;
-    &::after {
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      content: "";
-      width: 100px;
-      height: 3px;
-      background-color: #ff5c97;
-      -webkit-transform: translateX(-50%);
-      -moz-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      -o-transform: translateX(-50%);
-    }
-  }
 }
