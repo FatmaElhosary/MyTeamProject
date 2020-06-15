@@ -5,7 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 //using angular material
 import { MatSidenavModule } from '@angular/material/sidenav';
+//tooltip 
+/* import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu'; */
 
+//
 //owl-carousel
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -31,6 +35,7 @@ import { EditComponent } from './edit/edit.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { Edittemplate1Component } from './edittemplate1/edittemplate1.component';
+
 
 @NgModule({
   declarations: [
@@ -61,6 +66,7 @@ import { Edittemplate1Component } from './edittemplate1/edittemplate1.component'
 
 
     ChangePasswordComponent,
+  
 
 
     Edittemplate1Component,
@@ -75,6 +81,8 @@ import { Edittemplate1Component } from './edittemplate1/edittemplate1.component'
     BrowserAnimationsModule,
     CarouselModule,
     MatSidenavModule,
+   /*  MatTooltipModule,
+    MatMenuModule, */
   ],
 
   providers: [],

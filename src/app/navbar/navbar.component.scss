@@ -1,7 +1,6 @@
 .navbar {
   z-index: 999999999999;
 }
-
 .navbar-light .navbar-nav .nav-link {
   color: black;
   padding: 10px 25px;
@@ -47,8 +46,26 @@
   font-weight: 900;
   padding-top: 12px;
 }
+
+.more_btn{
+    background-image: linear-gradient(to right, #6fbcfe 0%, #998dff 51%, #6fbcfe 100%);
+    z-index: 2;
+    display: inline-block;
+    transition: all 400ms ease-out;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    border: 3px solid rgba(204, 241, 255, .5);
+    &:hover{
+        background-position: right center;
+        color: #fff;
+    }
+}
+
+
 @media (max-width: 574px) {
   .navbar-light .navbar-nav .nav-item .nav-link {
     background-color: #7c9ac8;
+
   }
 }

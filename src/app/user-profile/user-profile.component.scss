@@ -32,9 +32,14 @@ a{
  
    
   }
+ 
   .image-upload-container{
+    
 input{
   display: none;
+}
+i{
+  color : $themeColor;
 }
   }
 }
