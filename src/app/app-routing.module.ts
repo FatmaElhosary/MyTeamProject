@@ -18,6 +18,7 @@ import { EditComponent } from './edit/edit.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { Edittemplate1Component } from './edittemplate1/edittemplate1.component';
+import { EditUserTempleteComponent } from './edit-user-templete/edit-user-templete.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'templates', component: TemplatesComponent },
 
   { path: 'usertemplets/:userId', component: UserTempletesComponent },
+  {path: 'edittemplete/:userId/:templeteId',component:EditUserTempleteComponent},
   { path: 'resetpassword', component: ResetPasswordComponent },
   { path: 'edit', component: EditComponent },
 
