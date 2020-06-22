@@ -19,13 +19,14 @@ import { TemplatesComponent } from './templates/templates.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { Edittemplate1Component } from './edittemplate1/edittemplate1.component';
 import { EditUserTempleteComponent } from './edit-user-templete/edit-user-templete.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'userprofile/:userId', component: UserProfileComponent },
+  { path: 'userprofile/:userId', component: UserProfileComponent,canActivate:[AuthGuardService] },
   { path: 'signup', component: SignUpComponent },
   { path: 'edittemplate1', component: Edittemplate1Component },
   { path: 'team', component: TeamComponent },
@@ -34,8 +35,8 @@ const routes: Routes = [
 
   { path: 'templates', component: TemplatesComponent },
 
-  { path: 'usertemplets/:userId', component: UserTempletesComponent },
-  {path: 'edittemplete/:userId/:templeteId',component:EditUserTempleteComponent},
+  { path: 'usertemplets/:userId', component: UserTempletesComponent,canActivate:[AuthGuardService] },
+  {path: 'edittemplete/:userId/:templeteId',component:EditUserTempleteComponent ,canActivate:[AuthGuardService]},
   { path: 'resetpassword', component: ResetPasswordComponent },
   { path: 'edit', component: EditComponent },
 
