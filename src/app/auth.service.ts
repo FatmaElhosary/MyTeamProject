@@ -21,4 +21,14 @@ export class AuthService {
       loginData
     );
   }
+
+  checklogin(){
+    let token=localStorage.getItem('token');
+     //user not loged in
+     if(token==null){
+    return false;
+     }else{
+       return true;
+     }
+    }
 }
